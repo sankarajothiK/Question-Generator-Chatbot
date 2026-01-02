@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* -------- RESET -------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* -------- BODY -------- */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #2b0a3d, #311659, #6d28d9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------- CHAT CONTAINER -------- */
+.chat-container {
+    width: 420px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(14px);
+    border-radius: 22px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* -------- HEADER -------- */
+.chat-header {
+    padding: 16px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: rgba(255,255,255,0.15);
+}
+
+/* -------- CHAT BOX -------- */
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+/* -------- SCROLLBAR -------- */
+.chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+.chat-box::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+}
+
+/* -------- MESSAGES -------- */
+.bot-msg, .user-msg {
+    max-width: 80%;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    border-radius: 14px;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+/* BOT */
+.bot-msg {
+    background: rgba(255,255,255,0.25);
+    color: white;
+    align-self: flex-start;
+}
+
+/* USER */
+.user-msg {
+    background: #7c3aed;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+/* -------- INPUT AREA -------- */
+.chat-input {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px;
+    background: rgba(255,255,255,0.15);
+}
+
+/* -------- FILE BUTTON -------- */
+.file-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+/* -------- TEXT INPUT -------- */
+.chat-input input[type="text"] {
+    flex: 1;
+    padding: 9px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* -------- LANGUAGE SELECT -------- */
+.chat-input select {
+    padding: 7px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* -------- MIC BUTTON -------- */
+#voiceBtn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: #a855f7;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* -------- SEND BUTTON -------- */
+.chat-input button[type="submit"] {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: #7c3aed;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* -------- HOVER EFFECTS -------- */
+.file-btn:hover,
+#voiceBtn:hover,
+.chat-input button[type="submit"]:hover {
+    opacity: 0.85;
+}
+
+/* -------- DOWNLOAD BUTTON -------- */
+.download-btn {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 10px 18px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.download-btn:hover {
+    background: #16a34a;
+}
+
+/* -------- MOBILE RESPONSIVE -------- */
+@media (max-width: 480px) {
+    .chat-container {
+        width: 95%;
+        height: 95vh;
+    }
+}

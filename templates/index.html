@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Question Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="chat-container">
+
+    <div class="chat-header">
+        🎓 PDF Question Generator
+    </div>
+
+    <div id="chat-box" class="chat-box">
+        <div class="bot-msg">
+            👋 Upload a PDF and give instruction (Text or Voice)
+        </div>
+    </div>
+
+    <form id="upload-form" class="chat-input" enctype="multipart/form-data">
+
+        <!-- PDF -->
+        <label class="file-btn">
+            📂
+            <input type="file" name="pdf" required hidden>
+        </label>
+
+        <!-- Instruction -->
+        <input type="text" name="instruction" id="instruction"
+               placeholder="Type or use mic"
+               required>
+
+        <!-- Language Toggle -->
+        <select id="lang" name="lang">
+            <option value="ta">🇮🇳 Tamil</option>
+            <option value="en">🇬🇧 English</option>
+        </select>
+
+        <!-- Mic -->
+        <button type="button" id="voiceBtn">🎤</button>
+
+        <!-- Send -->
+        <button type="submit">➤</button>
+
+    </form>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
