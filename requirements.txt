@@ -3,3 +3,4 @@ flask-cors
 pymupdf
 python-docx
 groq
+gunicorn
